@@ -1,4 +1,5 @@
 import React from "react"
+import TextStyle from "./TextStyle"
 
 const NasaCard = (props) =>{
 
@@ -8,6 +9,8 @@ const NasaCard = (props) =>{
             <p>{props.data.date}</p>
             <p>{props.data.title}</p>
             <img src={props.data.url} alt="NASA CARD OF THE DAY" />
+            <TextStyle>{props.data.explanation}</TextStyle>
+            <p>{props.data.copyright}</p>
         </div>
     )
 }

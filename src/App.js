@@ -6,15 +6,16 @@ import NasaCard from "./NasaCard";
 
 function App() {
 
-  const[nasaData, setNasaData] = useState(null);
+  const [nasaData, setNasaData] = useState(null);
 
   useEffect( () => {
     axios.get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
     .then(res =>{
+      console.log(res);
       setNasaData(res.data);
     })
     .catch(err =>{
-      console.error(err)
+      console.error(err) 
     })
   },[])
 
